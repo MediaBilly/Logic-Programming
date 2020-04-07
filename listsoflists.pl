@@ -14,11 +14,6 @@ distribute([X|Xs],Vs,Out):-
     distribute(Xs,Vs,Out2),
     append(Out1,Out2,Out).
 
-% Converts a list into list of lists. For example: [a,b,c] => [[a],[b],[c]]
-break_list([],[]).
-break_list([X|Xs],[[X]|Rest]):-
-    break_list(Xs,Rest).
-
 cart_prod([],[[]]).
 cart_prod([X|Rest],CP):-
     cart_prod(Rest,CP1),
